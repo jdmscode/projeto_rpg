@@ -1,0 +1,57 @@
+# RPG de Texto em Java (POO)
+
+---
+
+## Descrição
+
+Este projeto permite que o jogador:
+
+- Crie um personagem com nome e escolha de classe (Guerreiro, Mago ou Arqueiro).
+- Explore cenários interativos com múltiplos caminhos e inimigos.
+- Participe de combates estratégicos contra inimigos controlados pelo sistema.
+- Gerencie um inventário com itens de cura, dano e buffs.
+- Salve e carregue o progresso em checkpoints.
+- Experimente capítulos com narrativa interativa e decisões que influenciam o jogo.
+
+---
+
+## 🛠 Funcionalidades
+
+1. **Criação de Personagem**
+   - Escolha de nome e classe.
+   - Definição de atributos: vida, ataque, defesa, mana (para magos), bônus de ataque crítico (para guerreiros).
+
+2. **Sistema de Combate**
+   - Combate por turnos entre jogador e inimigos.
+   - Uso de itens durante combate.
+   - Possibilidade de fuga.
+   - Salvamento durante combate.
+
+3. **Inventário**
+   - Adição e remoção de itens.
+   - Uso de poções, buffs e armas.
+   - Listagem de itens de forma ordenada.
+
+4. **Narrativa**
+   - Capítulos com sub-etapas.
+   - Decisões que afetam encontros com inimigos.
+   - Eventos aleatórios usando dados (Dado.rolar).
+
+5. **Checkpoint**
+   - Salvamento de progresso do jogador, capítulo e inimigos.
+   - Carregamento de checkpoint para retomar de onde parou.
+
+
+## Como executar
+
+### 1. Abrir o terminal no VS Code
+
+cd CaminhoDoProjeto (ex: C:\Users\Usuario\Área de Trabalho\RPG\rpg)
+
+mkdir -p out
+
+find src -name "*.java" > sources.txt
+
+javac -d out @sources.txt
+
+java -cp out com.projeto.rpg.Main
