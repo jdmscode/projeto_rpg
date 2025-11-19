@@ -17,12 +17,11 @@ public class GerenciadorDeCapitulos {
     }
 
     public boolean executarCapitulo(EstadoDoJogo estado, GerenciadorDeCombate combate) throws IOException {
-        if (estado.isFugiu()) {
-            estado.setEmCapitulo(false);
+       if (estado.isFugiu()) {
             estado.setFugiu(false);
+            estado.setSubEtapa(0);
             return false;
         }
-
         return switch (estado.getCapituloAtual()) {
             case 1 -> capitulo1(estado, combate);
             case 2 -> capitulo2(estado, combate);
